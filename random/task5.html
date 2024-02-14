@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>form</title>
+    <style>
+        .h2{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+       .area{
+        width: 100%;
+        height: 100px;
+        border:1px
+       }
+       .center{
+        
+        margin: 0;
+        position: relative;
+        top:40%;
+        left:45%;
+        
+
+       }
+    </style>
+
+</head>
+<body style="background-color: bisque;"> 
+    <fieldset style="border-radius: 70px;background-color: white;">
+    <h2 align="center">Application For Permission To Date My Daughter</h2>
+    <p><b>Note:</b> Form is to be completed at least 21 days prior to date</p>
+    <form>
+        <fieldset>
+         <legend>Personal Details</legend>
+         <label>First name:</label>
+         <input type="text" required><br>
+         <br>Address
+         <input type="text" required><br><br>
+         <label for="email">Email:</label>
+         <input type="email"required><br><br>
+         <label for="phone">Phone number:</label>
+         <input type="tel"  required><br><br>
+         <label for="iq">IQ:</label>
+         <input type="number" id="iq" name="iq"><br>
+        </form>
+         <p> Gender </p>
+         <form>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">female</label><br>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">other</label><br><br>
+        <label for="praposal">Date of Proposed Outing :</label>
+        <input type="date" id="praposal" name="praposal">
+    </fieldset>
+    <br>
+     <fieldset>  
+        <p> Check All That Apply </p>
+    <form >
+        <input type="checkbox" id="option1" name="tattoos" value="option">
+        <label for="option1"> I have tattoos and/or piercings </label><br>
+        <input type="checkbox" id="option2" name="older" value="option">
+        <label for="option2"> I am more than 2 years older than my daughter </label><br>
+        <input type="checkbox" id="option3" name="v8" value="option">
+        <label for="option3"> I own a panel van or V8 uteb</label><br>
+        <input type="checkbox" id="option4" name="Full-time" value="option">
+        <label for="option4"> I work full-time </label><br>
+        <input type="checkbox" id="option5" name="rich" value="option">
+        <label for="option5"> My parents are rich </label><br>
+        <input type="checkbox" id="option6" name="litt" value="option">
+        <label for="option6"> Is the date at a well lit public location </label><br>
+      </form>
+    </fieldset>
+    <br>
+    <fieldset>
+        <label for="opinion">Political Persuasion:</label>
+
+        <select id="opinion">
+        <option value="Right">Right wing</option>
+        <option value="Left">Left wing</option>
+        </select>
+
+        <label for="education">Education Level Completed:</label>
+
+        <select id="education">
+        <option value="University">University</option>
+        <option value="School">School</option>
+        </select>
+  
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend>Essay Section</legend>
+        
+        <p>In 50 words or more explain why you want to date my daughter </p>
+
+    <textarea rows="5" cols="80" name="reason" form="reason">
+        Enter text here...</textarea>
+        <br><br>
+        <p>Please Upload Contact details for 2 references </p>
+
+    <textarea rows="5" cols="80" name="details" form="Contact">
+        Enter text here...</textarea>
+        <br><br>
+
+        <p>Upload Police Certificate , Bank Statement and Medical Certificates here :
+            <label for="police_certi"></label>
+     <input type="file" id="police_certi" name="police_certi" required></fieldset> <br>
+    </fieldset>
+    <div class="area">
+        <div class="center">
+        <input type="submit" style="background-color:red; color: aliceblue;">
+        <br><br>
+    </div></div>
+</body>
+</html>

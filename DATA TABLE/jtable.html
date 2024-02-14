@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JQUERY Table</title>
+    <style>
+      body {
+        text-align: center;
+      }
+      table th {
+        background-color: aqua;
+        border-radius: 20px;
+      }
+      tr {
+        background-color: antiquewhite;
+      }
+      th {
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <table id="dataTable" align="center">
+      <tr>
+        <th>worker_ID</th>
+        <th>first_name</th>
+        <th>last_name</th>
+        <th>salary</th>
+        <th>Joining_date</th>
+        <th>Department</th>
+      </tr>
+      <tr>
+        <td contenteditable="true">001</td>
+        <td contenteditable="true">Monika</td>
+        <td contenteditable="true">arora</td>
+        <td contenteditable="true">100000</td>
+        <td contenteditable="true">2014-02-20 9:00:00</td>
+        <td contenteditable="true">HR</td>
+        <td><button onclick="deleteRow(this)">Delete</button></td>
+      </tr>
+      <tr>
+        <td contenteditable="true">002</td>
+        <td contenteditable="true">Niharika</td>
+        <td contenteditable="true">verma</td>
+        <td contenteditable="true">80000</td>
+        <td contenteditable="true">2014-06-11 9:00:00</td>
+        <td contenteditable="true">Admin</td>
+        <td><button onclick="deleteRow(this)">Delete</button></td>
+      </tr>
+      <tr>
+        <td contenteditable="true">003</td>
+        <td contenteditable="true">Vishal</td>
+        <td contenteditable="true">singhal</td>
+        <td contenteditable="true">300000</td>
+        <td contenteditable="true">2014-02-20 9:00:00</td>
+        <td contenteditable="true">HR</td>
+        <td><button onclick="deleteRow(this)">Delete</button></td>
+      </tr>
+      <tr>
+        <td contenteditable="true">004</td>
+        <td contenteditable="true">Amitabh</td>
+        <td contenteditable="true">singh</td>
+        <td contenteditable="true">500000</td>
+        <td contenteditable="true">2014-02-20 9:00:00</td>
+        <td contenteditable="true">Admin</td>
+        <td><button onclick="deleteRow(this)">Delete</button></td>
+      </tr>
+      <tr>
+        <td contenteditable="true">005</td>
+        <td contenteditable="true">Vivek</td>
+        <td contenteditable="true">bhati</td>
+        <td contenteditable="true">500000</td>
+        <td contenteditable="true">2014-06-11 9:00:00</td>
+        <td contenteditable="true">Admin</td>
+        <td><button onclick="deleteRow(this)">Delete</button></td>
+      </tr>
+      <tr>
+        <td contenteditable="true">006</td>
+        <td contenteditable="true">Vipul</td>
+        <td contenteditable="true">diwan</td>
+        <td contenteditable="true">200000</td>
+        <td contenteditable="true">2014-06-11 9:00:00</td>
+        <td contenteditable="true">Account</td>
+        <td><button onclick="deleteRow(this)">Delete</button></td>
+      </tr>
+      <tr>
+        <td contenteditable="true">007</td>
+        <td contenteditable="true">Satish</td>
+        <td contenteditable="true">kumar</td>
+        <td contenteditable="true">75000</td>
+        <td contenteditable="true">2014-01-20 9:00:00</td>
+        <td contenteditable="true">Account</td>
+        <td><button onclick="deleteRow(this)">Delete</button></td>
+      </tr>
+      <tr>
+        <td contenteditable="true">008</td>
+        <td contenteditable="true">Geetika</td>
+        <td contenteditable="true">Chauhan</td>
+        <td contenteditable="true">90000</td>
+        <td contenteditable="true">2014-04-11 9:00:00</td>
+        <td contenteditable="true">Admin</td>
+        <td><button onclick="deleteRow(this)">Delete</button></td>
+      </tr>
+    </table>
+
+    <button onclick="addRow()">Add Row</button>
+
+    <script>
+      function addRow() {
+        var table = document.getElementById("dataTable");
+        var newRow = table.insertRow(table.rows.length);
+        var cell1 = newRow.insertCell(0);
+        var cell2 = newRow.insertCell(1);
+        var cell3 = newRow.insertCell(2);
+        var cell4 = newRow.insertCell(3);
+        var cell5 = newRow.insertCell(4);
+        var cell6 = newRow.insertCell(5);
+        var cell7 = newRow.insertCell(6);
+
+        cell1.innerHTML = '<input type="text" placeholder="worker_ID">';
+        cell2.innerHTML = '<input type="text" placeholder="first_name">';
+        cell3.innerHTML = '<input type="text" placeholder="last_name">';
+        cell4.innerHTML = '<input type="text" placeholder="salary">';
+        cell5.innerHTML = '<input type="text" placeholder="Joining_date">';
+        cell6.innerHTML = '<input type="text" placeholder="Department">';
+        cell7.innerHTML = '<button onclick="deleteRow(this)">Delete</button>';
+      }
+
+      function deleteRow(button) {
+        if (confirm("Are you sure you want to delete the row?")) {
+          var row = button.parentNode.parentNode;
+          row.parentNode.removeChild(row);
+        }
+      }
+    </script>
+  </body>
+</html>

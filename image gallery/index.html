@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>IMAGE Gallery</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      img {
+        height: 250px;
+        padding: 30px;
+        display: block;
+        float: left;
+      }
+      ul li {
+        text-align: center;
+        text-decoration: none;
+        display: block;
+        display: inline;
+        padding: 10px 15px;
+        background-color: rgb(108, 108, 229);
+        margin: 10px;
+        font-size: 200%;
+      }
+      body {
+        background-color: bisque;
+        text-align: center;
+        margin-top: 30px;
+      }
+      h1 {
+        color: rgb(64, 19, 19);
+        font-size: 400%;
+        padding-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <h1>Image Gallery</h1>
+      <ul>
+        <li class="active">All</li>
+        <li>Toy</li>
+        <li>Car</li>
+        <li>Cloth</li>
+      </ul>
+      <br/>
+      <div class="product">
+        <img src="car1.jpeg" data-filter="car" />
+        <img src="car2.jpeg" data-filter="car" />
+        <img src="toy1.jpeg" data-filter="toy" />
+        <img src="cloth1.jpeg" data-filter="cloth" />
+        <img src="toy2.webp" data-filter="toy" />
+        <img src="cloth2.jpeg" data-filter="cloth" />
+      </div>
+    </section>
+
+    <script>
+      const liItem = document.querySelectorAll("ul li");
+      const imgItem = document.querySelectorAll(".product img");
+
+      liItem.forEach((li) => {
+        li.onclick = function () {
+          liItem.forEach((li) => {
+            li.className = "";
+          });
+          li.className = "active";
+          const value = li.textContent;
+          imgItem.forEach((img) => {
+            img.style.display = "none";
+            if (
+              img.getAttribute("data-filter") == value.toLowerCase() ||
+              value == "All"
+            ) {
+              img.style.display = "block";
+            }
+          });
+        };
+      });
+    </script>
+  </body>
+</html>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
