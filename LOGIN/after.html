@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .sidebar {
+        height: 100%;
+        width: 250px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #333;
+        padding-top: 20px;
+      }
+
+      .sidebar h2 {
+        color: #fff;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .sidebar ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .sidebar ul li {
+        padding: 10px;
+      }
+
+      .sidebar ul li a {
+        color: #fff;
+        text-decoration: none;
+      }
+      .content {
+        margin-left: 250px;
+        padding: 20px;
+      }
+
+      header {
+        padding: 20px 0;
+        border-bottom: 1px solid #ccc;
+      }
+      header a {
+        align-items: center;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sidebar">
+      <h2>Sidebar</h2>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Notification</a></li>
+
+        <li><a href="#">Settings</a></li>
+      </ul>
+    </div>
+    <div class="content">
+      <header>
+        <a href="index.html">Log out </a>
+        <h2>Welcome to Your Dashboard</h2>
+      </header>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

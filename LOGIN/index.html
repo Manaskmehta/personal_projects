@@ -1,57 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="container">
-     
       <fieldset>
-        <legend>LOGIN FORM</legend> 
-        <form><br>
-        <label>USERNAME :</label>
-        <input type="text" placeholder="Enter Username here" id="Username" ><br><br>
-        <label>Full Name :</label>
-        <input type="text" placeholder="Enter Full Name here" id="full-name"><br><br>
-        <label>Enter your Email ID </label>
-        <input type="email" name="Personal" id="email" placeholder="Enter email here" ><br><br>
-        <label>Phone number:</label>
-        <input type="number" placeholder="Enter Phone number here" id="phone"><br><br>
-        <select id="Gender">
-          <option value="0">Select your Gender</option>
-          <option value="Male">Male</option>
-          <option value="female">Female</option></select>
-        <br><br>
-        <label for="password">Enter your password here !</label>
-        <input type="password" name="password" id="enter"><br><br>
-        <label for="password">ReEnter your password here !</label>
-        <input type="password" name="password" id="reenter"><br><br>
-        <button type="button" onclick="final()" > LOGIN</button>
+        <legend>LOGIN FORM</legend>
+        <form>
+          <br />
+          <label>USERNAME :</label>
+          <input
+            type="text"
+            placeholder="Enter Username here"
+            id="Username"
+          /><br /><br />
+          <label>Full Name :</label>
+          <input
+            type="text"
+            placeholder="Enter Full Name here"
+            id="full-name"
+          /><br /><br />
+          <label>Enter your Email ID </label>
+          <input
+            type="email"
+            name="Personal"
+            id="email"
+            placeholder="Enter email here"
+          /><br /><br />
+          <label>Phone number:</label>
+          <input
+            type="number"
+            placeholder="Enter Phone number here"
+            id="phone"
+          /><br /><br />
+          <select id="Gender">
+            <option value="0">Select your Gender</option>
+            <option value="Male">Male</option>
+            <option value="female">Female</option>
+          </select>
+          <br /><br />
+          <label for="password">Enter your password here !</label>
+          <input type="password" name="password" id="enter" /><br /><br />
+          <label for="password">ReEnter your password here !</label>
+          <input type="password" name="password" id="reenter" /><br /><br />
+          <button type="button" onclick="final()">LOGIN</button>
         </form>
-        <script type="text/javascript"> 
-        function final(){
-        let Username = document.querySelector ('#Username').value;
-        let fullname = document.querySelector ('#full-name').value;
-        let email = document.querySelector ('#email').value;
-        let phone = document.querySelector ('#phone').value;
-        let pd =document.getElementById('enter').value;
-        let pd2 = document.getElementById('reenter').value
-        let Gender = document.querySelector('#Gender').value;
+        <script type="text/javascript">
+          function final() {
+            let Username = document.querySelector("#Username").value;
+            let fullname = document.querySelector("#full-name").value;
+            let email = document.querySelector("#email").value;
+            let phone = document.querySelector("#phone").value;
+            let pd = document.getElementById("enter").value;
+            let pd2 = document.getElementById("reenter").value;
+            let Gender = document.querySelector("#Gender").value;
 
-        if(Username <=0 || fullname <=0 || email <=0 || phone <=0 || Gender == 0){
-          alert("Pls Enter All Values");
-        }
-       else if( pd != pd2){
-        alert("Pls check your Password!!")
-      }
-       else{
-        document.write("THANK YOU FOR LOGGING IN ");
-      } 
-    }</script>
-    </fieldset>
+            if (
+              Username <= 0 ||
+              fullname <= 0 ||
+              email <= 0 ||
+              phone <= 0 ||
+              Gender == 0
+            ) {
+              alert("Pls Enter All Values");
+            } else if (pd != pd2) {
+              alert("Pls check your Password!!");
+            } else {
+              window.location.href = "after.html";
+            }
+          }
+        </script>
+      </fieldset>
     </div>
-</body>
+  </body>
 </html>
